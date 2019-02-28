@@ -1,0 +1,23 @@
+﻿@model AspNet_AdoNet_Evaluation.Models.SentenceWriterConfiguration
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2>Exerice 1</h2>
+
+<h4>Sentence Writer Result</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        @for (int i = 0; i < Model.NumberOfRepetitions; i++)
+        {
+            <p style="font-size:@(i+12)px">@Model.Sentence</p>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to configuration</a>
+</div>

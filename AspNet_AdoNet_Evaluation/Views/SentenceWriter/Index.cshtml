@@ -1,0 +1,34 @@
+﻿@model AspNet_AdoNet_Evaluation.Models.SentenceWriterConfiguration
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Exercice 1</h2>
+
+<h4>Sentence Writer Configuration</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sentence" class="control-label"></label>
+                <input asp-for="Sentence" class="form-control" placeholder="Type some words" />
+                <span asp-validation-for="Sentence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfRepetitions" class="control-label"></label>
+                <input asp-for="NumberOfRepetitions" class="form-control" placeholder="10" />
+                <span asp-validation-for="NumberOfRepetitions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Try it now" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

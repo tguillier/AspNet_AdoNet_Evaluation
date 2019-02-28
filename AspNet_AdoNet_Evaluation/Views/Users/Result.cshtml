@@ -1,0 +1,23 @@
+﻿@model AspNet_AdoNet_Evaluation.Models.User
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2>Exercice 3</h2>
+
+<h4>User Registration Result</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <p>Congratulations, you've just registered a user with id <b>@Model.Id</b> and this payment card :</p>
+        <p>@Model.CardType.ToString()</p>
+        <p>@Model.CardNumber</p>
+        <p>@Model.ExpirationDate</p>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to configuration</a>
+</div>

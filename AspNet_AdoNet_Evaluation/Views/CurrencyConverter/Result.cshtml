@@ -1,0 +1,21 @@
+﻿@model AspNet_AdoNet_Evaluation.ViewModels.CurrencyConverterViewModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2>Exercice 2</h2>
+
+<h4>Currency Converter Result</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <p>@Model.Configuration.Amount @Model.Configuration.CurrencyFrom = @Model.Result.ConvertedAmount @Model.Configuration.CurrencyTo</p>
+        <p>Actual change rate : @Model.Result.ChangeRate</p>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to configuration</a>
+</div>
